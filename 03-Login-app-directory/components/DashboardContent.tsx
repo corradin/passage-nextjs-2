@@ -54,10 +54,10 @@ const DashboardContent: FC<DashboardContentProps> = ({}) => {
     );
   }
 
-  const formattedCreatedAt = format(
-    new Date(userInfo.created_at),
-    "yyyy-MM-dd HH:mm:ss"
-  );
+  // const formattedCreatedAt = format(
+  //   new Date(userInfo.created_at),
+  //   "yyyy-MM-dd HH:mm:ss"
+  // );
 
   return (
     <>
@@ -73,8 +73,6 @@ const DashboardContent: FC<DashboardContentProps> = ({}) => {
               <br />
               Your username is: <b> {userInfo.email}</b>
               <br />
-              Account created at:
-              <br /> <b> {formattedCreatedAt}</b>
             </p>
             <LogoutButton />
           </div>
