@@ -1,13 +1,17 @@
-// import { Passage } from "@passageidentity/passage-js";
-
 export interface PassageUserInfo {
   user: string;
   email: string;
 }
 
+export async function signOut() {
+  try {
+    await fetch("/oauth2/sign_out?rd=https%3A%2F%2Fexpensive-lightslategray-cat.withpassage.com%2Flogout");
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export async function getCurrentUserInfo() {
-  
-  // const passage = new Passage(process.env.NEXT_PUBLIC_PASSAGE_APP_ID!);
   try {
     const response = await fetch("/oauth2/userinfo");
 
@@ -18,14 +22,6 @@ export async function getCurrentUserInfo() {
         userInfo,
       };
     }
-
-    
-
-    // const user = passage.getCurrentUser();
-    // const userInfo = await user.userInfo();
-    // return {
-    //   userInfo,
-    // };
   } catch (error) {
     console.log(error);
   }
