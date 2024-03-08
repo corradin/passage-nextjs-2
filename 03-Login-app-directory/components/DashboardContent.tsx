@@ -4,6 +4,7 @@ import { getCurrentUserInfo, PassageUserInfo } from "@/actions/getCurrentUserInf
 import LogoutButton from "./LogoutButton";
 import Link from "next/link";
 import { format } from "date-fns";
+import Image from "next/image";
 
 interface DashboardContentProps {}
 
@@ -68,6 +69,7 @@ const DashboardContent: FC<DashboardContentProps> = ({}) => {
               <h1>Welcome</h1>
             </div>
             <div className="break-normal"></div>
+            <Image src="/pineapple.jpeg" alt="pineapple" />
             <p>
               You successfully signed in with Passage.
               <br />
