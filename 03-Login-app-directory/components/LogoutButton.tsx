@@ -10,9 +10,9 @@ const LogoutButton: FC<LogoutButtonProps> = ({}) => {
   const router = useRouter();
   // const passage = new Passage(process.env.NEXT_PUBLIC_PASSAGE_APP_ID!);
   // const session = passage.getCurrentSession();
-  const handleLogout = async () => {
+  const handleLogout = () => {
     // session.signOut();
-    await signOut();
+    signOut();
     router.push("/");
   };
 
